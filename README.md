@@ -37,7 +37,7 @@ pio boards
 ```
 You can filter boards with specific MCU using the MCU itself as an extra parameter. However, a large number of matches can be further filtered out using `grep`:
 ```bash
-pio boards ESP32 | grep -i "dev module" # example for WROOM-32
+pio boards ESP32 | grep -i "dev module"
 ```
 which will output something like
 ```
@@ -58,9 +58,10 @@ curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/
 sudo service udev restart
 ```
 ```bash
-pio run                  # compile
-pio run --target upload  # upload to the board specified in platformio.ino
+pio run
+pio run --target upload
 ```
+The second command uploads the compiled binaries to the board specified in `platformio.ino`
 
 ## References
 https://docs.platformio.org/en/latest/core/index.html
