@@ -1,5 +1,5 @@
 # First PlatformIO project
-## Install PlatformIO (MacOS)
+## Install PlatformIO (MacOS and Linux)
 
 Download the install script to a temporary folder:
 ``` bash
