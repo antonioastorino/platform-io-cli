@@ -51,6 +51,12 @@ pio project init --board esp32dev
 This will create the above structure and populate the file `platformio.ini` with the pertinent values. 
 
 ## Compile and upload
+On Linux, some `udev` rules are needed:
+```bash
+curl -fsSL https://raw.githubusercontent.com/platformio/platformio-core/develop/platformio/assets/system/99-platformio-udev.rules \
+   | sudo tee /etc/udev/rules.d/99-platformio-udev.rules
+sudo service udev restart
+```
 ```bash
 pio run                  # compile
 pio run --target upload  # upload to the board specified in platformio.ino
